@@ -4,61 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Television</title>
-
+    <title>My TV</title>
     <link href="./css/styles.css" rel="stylesheet">
-    </style>
 </head>
 
 <body>
-    <!--PAGE CONTENT START-->
-    <div class="container-pagina">
-        <div class="container">
-            <div id="television">      <!--Here starts the TV-->
-                <div id="screen" class="offCh">        <!-- The actual screen -->
-                    <div id="chanNum"></div>
+    <div class="container">
+        <div class="television">
+            <div id="screen" class="screenOff">
+                <!--<img id="static" src="./img/static.gif" />
+                <img id="ch1" src="./img/Stitch.gif" />
+                <img id="ch2" src="./img/BobsBurgers.gif" />
+                <img id="ch3" src="./img/FamilyGuy.gif" />
+                <img id="ch4" src="./img/EmmaStone.gif" />
+                <img id="ch5" src="./img/HappyDrinking.gif" />
+                <img id="ch6" src="./img/BadBunny.gif" />
+                <img id="ch7" src="./img/WhyHim.gif" />
+                <img id="ch8" src="./img/Larissa90days.gif" />
+                <img id="ch9" src="./img/LouisTheroux.gif" />-->
+                <div id="tv-info" class="info-off">
                     <div id="date"></div>
-                    <div id="time"></div>
-                    <!-- <img id="default" src="./img/default.jpeg"/>
-                    <img id="c1" src="./img/news.gif"/>
-                    <img id="c2" src="./img/sport.gif"/>
-                    <img id="c3" src="./img/weather.gif"/>
-                    <img id="c4" src="./img/discovery.gif"/>
-                    <img id="c5" src="./img/disney.gif"/>
-                    <img id="c6" src="./img/hormiguero.gif"/>
-                    <img id="c7" src="./img/jebait.gif"/>
-                    <img id="c8" src="./img/music.gif"/>
-                    <img id="c9" src="./img/kardashian.gif"/> -->
+                    <div id="chanel-name"></div>
                 </div>
             </div>
-
-            <div class="remote">               <!--Remote section start-->
-                <div id="led">              <!--Led light here-->
-                    <div class="OFF" id="power"></div>
-                </div>
-                <div id="row1">
-                    <div class="button" id="chan1">1</div>
-                    <div class="button" id="chan2">2</div>
-                    <div class="button" id="chan3">3</div>
-                </div>
-                <div id="row2">
-                    <div class="button" id="chan4">4</div>
-                    <div class="button" id="chan5">5</div>
-                    <div class="button" id="chan6">6</div>
-                </div>
-                <div id="row3">
-                    <div class="button" id="chan7">7</div>
-                    <div class="button" id="chan8">8</div>
-                    <div class="button" id="chan9">9</div>
-                </div>
-            </div>                           <!--Remote section end-->
         </div>
-    </div>
 
-    <!--PAGE CONTENT END-->
+        <div class="remote">
+            <div id="led">              <!--Led light here-->
+                <div class="button" id="butOnOf">O</div>
+                <div class="OFF" id="power"></div>
 
-    <script src="./js/main.js"></script>
-
+                <div class="button" id="info">I</div>
+            </div>
+            <div id="row1">
+                <div class="button" id="chan1">1</div>
+                <div class="button" id="chan2">2</div>
+                <div class="button" id="chan3">3</div>
+            </div>
+            <div id="row2">
+                <div class="button" id="chan4">4</div>
+                <div class="button" id="chan5">5</div>
+                <div class="button" id="chan6">6</div>
+            </div>
+            <div id="row3">
+                <div class="button" id="chan7">7</div>
+                <div class="button" id="chan8">8</div>
+                <div class="button" id="chan9">9</div>
+            </div>
+        </div>
+        <script src="./js/main.js"></script>
 </body>
 
 </html>
