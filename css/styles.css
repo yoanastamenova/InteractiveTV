@@ -1,38 +1,181 @@
 body {
-    padding: 0;
     margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: content-box;
 
     height: 100vh;
-    width: 100vw;
 
-    background-color: burlywood;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#television {
+    width: 70vw;
+    height: 80vh;
+
+    background-color: rgb(27, 25, 25);
+
+    border: 1.5em solid black;
+    border-radius: 3.5em;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.remMid {
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.remBot {
+#screen {
     width: 100%;
+    height: 100%;
+
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    color: white;
-    font-weight: bold;
+    justify-content: center;
+
+    align-items: start;
+    background-position: center;
+    box-sizing: content-box;
+}
+
+#chanNum {
+    color: green;
+    font-size: 2em;
+    font-style: italic;
+    margin: 0.5em;
+}
+
+#date {
+    color: green;
+    font-size: 2em;
+    margin: 0.5em;
+    font-style: italic;
+}
+
+#time {
+    color: green;
+    font-size: 2em;
+    margin: 0.5em;
+    font-style: italic;
 }
 
 
 .remote {
-    margin: 3em;
-    padding: 0;
+    width: 10em;
+    height: 28em;
+
+    margin-left: 5em;
+    margin-top: 2em;
+    border-radius: 1em;
+
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    box-sizing: content-box;
+    background-color: rgb(113, 102, 102);
 }
 
-#screenDefault {
-    background-color: black;
+
+.button {
+    width: 2em;
+    height: 1.8em;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: content-box;
+
+    border-radius: 0.5em;
+    background-color: gray;
+
+}
+
+#led {
+    height: 3em;
+    width: 8em;
+
+    display: flex;
+
+}
+
+.OFF {
+    width: 2em;
+    height: 2em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+
+    border-radius: 50%;
+    background-color: red;
+
+}
+
+.ON {
+    width: 2em;
+    height: 2em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+
+    border-radius: 50%;
+    background-color: green;
+
+}
+
+
+#controls {
+    height: 6em;
+    width: 10em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#row1 {
+    height: 2em;
+    width: 8em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: center;
+
+}
+
+#row2 {
+    height: 2em;
+    width: 8em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: center;
+
+}
+
+#row3 {
+    height: 2em;
+    width: 8em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: center;
+
 }
