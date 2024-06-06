@@ -57,3 +57,4 @@ power.addEventListener("click", () => {
         chanNum.innerHTML = ""
     }
 })
+
