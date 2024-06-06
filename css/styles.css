@@ -22,7 +22,6 @@ body {
 .television {
     height: 40vh;
     width: 40vw;
-    background-color: gray;
     border: 1em solid black;
     border-radius: 3em;
     display: flex;
@@ -43,15 +42,31 @@ body {
 #screen {
     width: 100%;
     height: 100%;
+    
+    border-radius: 1em;
 
-    border-radius: 2.5em;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: start;
-    background-position: center;
-    box-sizing: content-box;
 
+
+    box-sizing: content-box;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+}
+
+#tv-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    display: flex;
+    justify-content: center;
 }
 
 .remote {
@@ -69,9 +84,10 @@ body {
     justify-content: space-evenly;
     
     box-sizing: content-box;
+    border: 2px solid rgb(17, 15, 15);
     background-color: rgb(110, 106, 106);
 }
-#led {
+#rowSup {
 
     height: 3em;
     width: 8em;
@@ -127,6 +143,7 @@ body {
 #row1 {
     height: 2em;
     width: 8em;
+
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -137,6 +154,7 @@ body {
 #row2 {
     height: 2em;
     width: 8em;
+
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -147,11 +165,22 @@ body {
 #row3 {
     height: 2em;
     width: 8em;
+
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: center;
 
+}
+
+#rowBot {
+    height: 2em;
+    width: 8em;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: center;
 }
 
 
