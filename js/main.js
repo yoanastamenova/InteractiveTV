@@ -10,6 +10,7 @@
  
  let currentChannel = 0;
  
+ //Array for channels changing
  for (let i = 0; i < buttons.length; i++) {
      buttons[i].style.pointerEvents = "none";
  }
@@ -22,6 +23,7 @@
      infoScreen.innerHTML = "Date & Time: " + new Date().toLocaleString();
  }
  
+ //switch for power led, channel changing, turning off and info hide
  for (let i = 0; i < buttons.length; i++) {
      buttons[i].addEventListener('click', function(e) {
          let buttonId = e.target.id;

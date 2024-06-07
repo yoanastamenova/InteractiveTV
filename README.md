@@ -44,9 +44,9 @@ This project is part of the Full Stack Developer Bootcamp by GeeksHubs Academy. 
 
 ## Looks of the page
 TV with off screen
-<img src="./">  
+<img src="./img/Screenshot 2024-06-07 at 19.16.43.png">  
 TV turned on
-<img src="./">
+<img src="./img/Screenshot 2024-06-07 at 19.16.55.png">
 
 
 ## Future functionalities
@@ -76,7 +76,7 @@ You can do it in 2 ways:
         ```
     - Opening a Pull Request
 
-## Webgrafia:
+## Webgraphy:
 To achieve my project I used the following resources:
 - <a href="https://pinterest.com/es"> Images</a>
 
