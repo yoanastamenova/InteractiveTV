@@ -1,60 +1,20 @@
-let power = document.getElementById("power");
-let isPlaying = false;
+ // Kidnap all the elemnts needed
+    let buttons = document.getElementsByClassName('button');
+    let power = document.getElementById('power');
+    let screen = document.getElementById('screen');
+    let infoScreen = document.getElementById('infoScreen');
+    let chanelScreen = document.getElementById('chanelScreen');
+    let tvInfo = document.getElementById('tv-info');
 
-let button = document.getElementsByClassName("button");
-let arrayButtons = Array.from(button)
+    let channels = ['default', 'ch1', 'ch2', 'ch3', 'ch4', 'ch5', 'ch6', 'ch7', 'ch8', 'ch9'];
 
-let date = document.getElementById("date")
-let time = document.getElementById("time")
-let fecha = new Date();
+    let currentChannel = 0;  
 
-let defaultScr = document.getElementById("screen")
-
-for (let i = 0; i < arrayButtons.length; i++) {
-    arrayButtons[i].addEventListener("click", () => {
-
-        time.style.visibility = "visible";
-        date.style.visibility = "visible";
-        chanNum.style.visibility = "visible";
-
-        if (isPlaying) {
-            chanNum.innerHTML = `Channel ${i + 1}`
-            time.innerHTML = fecha.toLocaleTimeString();
-            date.innerHTML = fecha.toLocaleDateString();
-
-            setTimeout(function () {
-                time.style.visibility = "hidden";
-                date.style.visibility = "hidden";
-                chanNum.style.visibility = "hidden";
-            }, 5500);
+    
+    for (let i = 0; i < buttons.length; i++) {
+        if (buttons[i].id !== "butOnOff") {
+            buttons[i].style.pointerEvents = "none";
         }
-
-    })
-}
-
-power.addEventListener("click", () => {
-
-    chanNum.style.visibility = "visible";
-    time.style.visibility = "visible";
-    date.style.visibility = "visible";
-
-    power.classList.toggle("ON")
-    isPlaying = !isPlaying
-
-    if (isPlaying) {
-        time.innerHTML = fecha.toLocaleTimeString();
-        date.innerHTML = fecha.toLocaleDateString();
-
-        setTimeout(function () {
-            time.style.visibility = "hidden";
-            date.style.visibility = "hidden";
-            chanNum.style.visibility = "hidden";
-        }, 5500);
-
-    } else {
-        time.innerHTML = ""
-        date.innerHTML = ""
-        chanNum.innerHTML = ""
     }
-})
+
 
