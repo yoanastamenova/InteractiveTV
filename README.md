@@ -21,6 +21,12 @@ Welcome to my interactive TV project! The idea of this project is to recreate a 
 
 ## About the project 🔎
 This project is part of the Full Stack Developer Bootcamp by GeeksHubs Academy. Forever gratefull to them for the help, opportunety and goals set to learn, achieve and prosper as wanted.
+
+## Features
+ - Interactive remote and a TV screen simulating real life watching experience
+ - DOM usage for dynamic change of channels and info part on the screen
+ - Actial date and time showing as well as current channel information at imnfo part
+ - Responsive design added making the web page work perfectly on mobile
   
 
 ## Stack
