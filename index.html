@@ -5,65 +5,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My TV</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/styles.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
-        <div class="television">
-            <div id="screen" class="screenOff">
-                <div id="tv-info" class="info-off">
-                    <div id="infoScreen"></div>
-                    <div id="chanelScreen"></div>
+        <div class="row justify-content-center align-items-center vh-100">
+            <div class="col-12 col-md-8 television">
+                <div id="screen" class="screenOff">
+                    <div id="tv-info" class="info-off">
+                        <div id="infoScreen"></div>
+                        <div id="chanelScreen"></div>
+                    </div>
+                    <img id="default" src="./img/default.jpg" />
+                    <img id="ch1" src="./img/ball.jpg" />
+                    <img id="ch2" src="./img/cartoon-network.jpg" />
+                    <img id="ch3" src="./img/horror.jpg" />
+                    <img id="ch4" src="./img/jujutsu.jpg" />
+                    <img id="ch5" src="./img/mtv.jpg" />
+                    <img id="ch6" src="./img/news.jpg" />
+                    <img id="ch7" src="./img/nirvana.jpg" />
+                    <img id="ch8" src="./img/The_Weather_Channel.jpg" />
+                    <img id="ch9" src="./img/car.jpg" />
                 </div>
-                <img id="default" src="./img/default.jpg" />
-                <img id="ch1" src="./img/ball.jpg" />
-                <img id="ch2" src="./img/cartoon-network.jpg" />
-                <img id="ch3" src="./img/horror.jpg" />
-                <img id="ch4" src="./img/jujutsu.jpg" />
-                <img id="ch5" src="./img/mtv.jpg" />
-                <img id="ch6" src="./img/news.jpg" />
-                <img id="ch7" src="./img/nirvana.jpg" />
-                <img id="ch8" src="./img/The_Weather_Channel.jpg" />
-                <img id="ch9" src="./img/car.jpg" />
             </div>
-        </div>
 
-        <div class="remote">
-            <div id="rowSup">             
-                <div class="button" id="butOnOff">Ⓘ</div>
-                <div class="OFF" id="power"></div>
-                <div class="button" id="info">inf</div>
-            </div>
-            <div id="row1">
-                <div class="button" id="chan1">1</div>
-                <div class="button" id="chan2">2</div>
-                <div class="button" id="chan3">3</div>
-            </div>
-            <div id="row2">
-                <div class="button" id="chan4">4</div>
-                <div class="button" id="chan5">5</div>
-                <div class="button" id="chan6">6</div>
-            </div>
-            <div id="row3">
-                <div class="button" id="chan7">7</div>
-                <div class="button" id="chan8">8</div>
-                <div class="button" id="chan9">9</div>
-            </div>
-            <div id="rowBot">
-                <div class="volume">          
-                <div class="button" id="volUp">△</div>
-                <div class="text-vol" id="power">VOL</div>
-                <div class="button" id="volDown">▽</div>
-                </div>  
-                <div class="channel">          
-                <div class="button" id="chUp">△</div>
-                <div class="text-ch" id="power">CH</div>
-                <div class="button" id="chDown">▽</div>
-                </div> 
+             <div class="col-12 col-md-2"></div>
+
+            <div class="col-12 col-md-4 remote">
+                <div id="rowSup" class="d-flex justify-content-around align-items-center mb-3">
+                    <div class="button" id="butOnOff">Ⓘ</div>
+                    <div id="power" class="OFF"></div>
+                    <div class="button" id="info">inf</div>
+                </div>
+                <div id="row1" class="d-flex justify-content-around align-items-center mb-3">
+                    <div class="button" id="chan1">1</div>
+                    <div class="button" id="chan2">2</div>
+                    <div class="button" id="chan3">3</div>
+                </div>
+                <div id="row2" class="d-flex justify-content-around align-items-center mb-3">
+                    <div class="button" id="chan4">4</div>
+                    <div class="button" id="chan5">5</div>
+                    <div class="button" id="chan6">6</div>
+                </div>
+                <div id="row3" class="d-flex justify-content-around align-items-center mb-3">
+                    <div class="button" id="chan7">7</div>
+                    <div class="button" id="chan8">8</div>
+                    <div class="button" id="chan9">9</div>
+                </div>
+                <div id="rowBot" class="d-flex justify-content-around align-items-center">
+                    <div class="volume d-flex flex-column align-items-center">
+                        <div class="button" id="volUp">△</div>
+                        <div class="text-vol">VOL</div>
+                        <div class="button" id="volDown">▽</div>
+                    </div>
+                    <div class="channel d-flex flex-column align-items-center">
+                        <div class="button" id="chUp">△</div>
+                        <div class="text-ch">CH</div>
+                        <div class="button" id="chDown">▽</div>
+                    </div>
+                </div>
             </div>
         </div>
-        <script src="./js/main.js"></script>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
