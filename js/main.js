@@ -1,21 +1,25 @@
-// Getting all the let elements that will be needed
+// Getting all the elements that will be needed
 let buttons = document.getElementsByClassName('button');
 let power = document.getElementById('power');
 let screen = document.getElementById('screen');
 let infoScreen = document.getElementById('infoScreen');
 let chanelScreen = document.getElementById('chanelScreen');
 let tvInfo = document.getElementById('tv-info');
-let channels = ['default', 'ch1', 'ch2', 'ch3', 'ch4', 'ch5', 'ch6', 'ch7', 'ch8', 'ch9'];
-let currentChannel = 0;  
+let chUp = document.getElementById('chUp');
+let chDown = document.getElementById('chDown');
 
-// Initially disable all buttons except power button
+// Creating array for the channels
+let channels = ['default', 'ch1', 'ch2', 'ch3', 'ch4', 'ch5', 'ch6', 'ch7', 'ch8', 'ch9'];
+let currentChannel = 0;
+
+// Disable all buttons except the power button initially
 for (let i = 0; i < buttons.length; i++) {
     if (buttons[i].id !== "butOnOff") {
         buttons[i].style.pointerEvents = "none";
     }
 }
 
-// Function for displaying the info and the current channel 
+// Function for displaying the info and the current channel
 let changeChannel = function(channelIndex) {
     document.getElementById(channels[currentChannel]).style.display = 'none';
     currentChannel = channelIndex;
@@ -24,11 +28,11 @@ let changeChannel = function(channelIndex) {
     infoScreen.innerHTML = "Date & Time: " + new Date().toLocaleString();
 }
 
-// Adding event listeners to buttons, toggle for power and led
+// Event listeners for buttons
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function(e) {
         let buttonId = e.target.id;
-        
+
         if (buttonId === 'butOnOff') {
             screen.classList.toggle('screenOff');
             power.classList.toggle('ON');
@@ -38,9 +42,9 @@ for (let i = 0; i < buttons.length; i++) {
                 for (let i = 0; i < buttons.length; i++) {
                     buttons[i].style.pointerEvents = "";
                 }
-                for (let j = 0; j < channels.length; j++) {
-                    document.getElementById(channels[j]).style.display = 'none';
-                }
+                channels.forEach(function(channel) {
+                    document.getElementById(channel).style.display = 'none';
+                });
                 changeChannel(0);
             } else {
                 for (let i = 0; i < buttons.length; i++) {
@@ -48,17 +52,40 @@ for (let i = 0; i < buttons.length; i++) {
                         buttons[i].style.pointerEvents = "none";
                     }
                 }
-                for (let j = 0; j < channels.length; j++) {
-                    document.getElementById(channels[j]).style.display = 'none';
-                }
+                channels.forEach(function(channel) {
+                    document.getElementById(channel).style.display = 'none';
+                });
                 infoScreen.innerHTML = "";
                 chanelScreen.innerHTML = "";
                 tvInfo.style.display = 'none';
             }
         } else if (buttonId.startsWith('chan')) {
-            changeChannel(parseInt(buttonId.replace('chan', '')));
+            let channelNum = parseInt(buttonId.replace('chan', ''));
+            changeChannel(channelNum);
         } else if (buttonId === 'info') {
-            tvInfo.style.display = (tvInfo.style.display === 'none') ? 'block' : 'none';
+            if (tvInfo.style.display === 'none') {
+                tvInfo.style.display = 'block';
+            } else {
+                tvInfo.style.display = 'none';
+            }
         }
     });
 }
+
+// Event listener for channel up button
+chUp.addEventListener('click', function() {
+    if (currentChannel < channels.length - 1) {
+        changeChannel(currentChannel + 1);
+    } else {
+        changeChannel(0); 
+    }
+});
+
+// Event listener for channel down button
+chDown.addEventListener('click', function() {
+    if (currentChannel > 0) {
+        changeChannel(currentChannel - 1);
+    } else {
+        changeChannel(channels.length - 1); 
+    }
+});
