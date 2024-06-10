@@ -57,8 +57,13 @@ TV turned on
 
 ## Future functionalities
 ✅ Make VOL and CH buttons  
-⬜ Make the design responsive
+
+✅ Make the design responsive
+
 ⬜ Add MENU button
+
+⬜ Add Mute,Netflix and more buttons
+
 ⬜ ...  
 
 ## Contributions
