@@ -50,9 +50,9 @@ This project is part of the Full Stack Developer Bootcamp by GeeksHubs Academy. 
 
 ## Looks of the page
 TV with off screen
-<img src="./img/Screenshot 2024-06-07 at 19.16.43.png">  
+<img src="./img/Screenshot_OFF.png">  
 TV turned on
-<img src="./img/Screenshot 2024-06-07 at 19.16.55.png">
+<img src="./img/Screenshot_ON.png">
 
 
 ## Future functionalities
