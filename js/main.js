@@ -33,6 +33,7 @@ for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function(e) {
         let buttonId = e.target.id;
 
+        //Check if the clicked button is the power button
         if (buttonId === 'butOnOff') {
             screen.classList.toggle('screenOff');
             power.classList.toggle('ON');
@@ -46,6 +47,8 @@ for (let i = 0; i < buttons.length; i++) {
                     document.getElementById(channel).style.display = 'none';
                 });
                 changeChannel(0);
+
+            //Checks if the TV is off and block the buttons, hides the screen etc
             } else {
                 for (let i = 0; i < buttons.length; i++) {
                     if (buttons[i].id !== "butOnOff") {
@@ -59,9 +62,13 @@ for (let i = 0; i < buttons.length; i++) {
                 chanelScreen.innerHTML = "";
                 tvInfo.style.display = 'none';
             }
+
+        // Checks if a button clicked was a channel
         } else if (buttonId.startsWith('chan')) {
             let channelNum = parseInt(buttonId.replace('chan', ''));
             changeChannel(channelNum);
+
+        //Mantaining the show/hide to the info button
         } else if (buttonId === 'info') {
             if (tvInfo.style.display === 'none') {
                 tvInfo.style.display = 'block';

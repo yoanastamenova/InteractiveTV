@@ -215,7 +215,7 @@ img {
 @media (max-width: 500px) {
     .television {
         width: 60vh;
-        margin-top: 50vh; /* Increase the top margin */
+        margin-top: 50vh; 
     }
 }
 
