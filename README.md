@@ -91,5 +91,9 @@ To achieve my project I used the following resources:
 ``` js
  const developer = "datata";
 
- console.log("Desarrollado por: " + datata);
-```  
+ console.log("Made by: " + datata);
+```
+
+## Deploy:
+
+https://yoanastamenova.github.io/InteractiveTV/
